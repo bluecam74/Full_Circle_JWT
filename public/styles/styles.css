@@ -1,3 +1,30 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+/* CREATE PAGE */
+.create {
+  background-image: url("/images/jungle.jpg")
+}
+.create .form-group {
+  text-align: center;
+  width: 100%;
+}
+
+.create .btn-primary {
+  color: black;
+  background-color: white;
+  border-color: white;
+  width: 100%;
+}
+
+.create .btn-primary:hover {
+  background-color: rgb(53, 105, 53);
+  border-color: rgb(53, 105, 53);
+}
+
+.create .btn-primary:active {
+  background-color: rgb(86, 139, 86);
+  border-color: rgb(86, 139, 86);
+}
+/* CREATE PAGE */
