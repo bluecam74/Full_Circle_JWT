@@ -5,16 +5,16 @@
  */
 
 /* Links */
-a,
+.home a,
 a:focus,
 a:hover {
   color: #fff;
 }
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
+.home .btn-secondary,
+.home .btn-secondary:hover,
+.home .btn-secondary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
@@ -26,13 +26,13 @@ a:hover {
  * Base structure
  */
 
-html,
+.home html,
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
 
-.background-image {
+.home-background-image {
     background-image: url(../images/dark_greenleaf.jpg);
     background-size: cover;
     background-position: center center;
@@ -42,13 +42,13 @@ body {
     z-index: -1;
 }
 
-body {
+.home body {
   display: -ms-flexbox;
   display: flex;
   color: white;
 }
 
-.cover-container {
+.home .cover-container {
   max-width: 42em;
 }
 
@@ -57,61 +57,61 @@ body {
  * Header
  */
 
- .cover-heading {
+ .home .cover-heading {
      color: white;
  }
 
- .leadpar {
+ .home .leadpar {
      color: white;
  }
 
-.masthead {
+ .home .masthead {
   margin-bottom: 2rem;
 }
 
-.masthead-brand {
+.home .masthead-brand {
   margin-bottom: 0;
 }
 
-.nav-masthead .nav-link {
+.home .nav-masthead .nav-link {
   padding: .25rem 0;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
+.home .nav-masthead .nav-link:hover,
+.home .nav-masthead .nav-link:focus {
   border-bottom-color: black;
 }
 
-.nav-masthead .nav-link + .nav-link {
+.home .nav-masthead .nav-link + .nav-link {
   margin-left: 1rem;
 }
 
-.nav-masthead .active {
+.home .nav-masthead .active {
   color: black;
   border-bottom-color: #943e08;
 }
 
-#login {
+.home #login {
     background-color: #943e08
 }
 
-#signup {
+.home #signup {
     background-color: #943e08
 }
 
-#leadbutton {
+.home #leadbutton {
         margin: 0 auto;
         text-align: center;
 }
 
 @media (min-width: 48em) {
-  .masthead-brand {
+  .home .masthead-brand {
     float: left;
   }
-  .nav-masthead {
+  .home .nav-masthead {
     float: right;
   }
 }
@@ -120,12 +120,12 @@ body {
 /*
  * Cover
  */
-.cover {
+ .home .cover {
   padding: 0 1.5rem;
   margin-top: 30px;
   margin-bottom: 50px;
 }
-.cover .btn-lg {
+.home .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
@@ -134,18 +134,18 @@ body {
 /*
  * Footer
  */
-.mastfoot {
+ .home .mastfoot {
   color:white;
 }
 
-a {
+.home a {
     color: white !important;
     text-decoration: none !important;
 }
 
 /*forms*/
 
-.form-control {
+.home .form-control {
     width: 50% !important;
     margin: 0 auto !important;
 }
