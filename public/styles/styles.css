@@ -149,3 +149,45 @@ a {
     width: 50% !important;
     margin: 0 auto !important;
 }
+
+/* CREATE PAGE */
+.create-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+.create .form-group {
+  text-align: center;
+  width: 100%;
+}
+.create .btn-primary {
+  color: black;
+  background-color: white;
+  border-color: white;
+  width: 100%;
+}
+.create .btn-primary:hover {
+  background-color: rgb(53, 105, 53);
+  border-color: rgb(53, 105, 53);
+}
+.create .btn-primary:active {
+  background-color: rgb(86, 139, 86);
+  border-color: rgb(86, 139, 86);
+}
+/* CREATE PAGE */
+/* FAQ */
+.faq-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: -220px;
+}
+.faq .nav-links {
+  color: black;
+  font-size: 20px;
+}
+.faq .social {
+  color: white;
+  font-size: 50px;
+}
+/* FAQ */

@@ -1,8 +1,10 @@
 var db = require("../models");
+var express = require("express");
+var router = express.Router();
 
-module.exports = function (app) {
+
   // Load index page
-  app.get("/", function (req, res) {
+  router.get("/", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("index", {
         msg: "Welcome!",
@@ -12,7 +14,7 @@ module.exports = function (app) {
   });
 
   // Load FAQ
-  app.get("/faq", function (req, res) {
+  router.get("/faq", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("faq", {
         msg: "Welcome!",
@@ -22,7 +24,7 @@ module.exports = function (app) {
   });
 
   // Create account
-  app.get("/create_account", function (req, res) {
+  router.get("/create_account", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("create", {
         msg: "Welcome!",
@@ -32,7 +34,7 @@ module.exports = function (app) {
   });
 
   // Profile
-  app.get("/profile", function (req, res) {
+  router.get("/profile", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("profile", {
         msg: "Welcome!",
@@ -42,7 +44,7 @@ module.exports = function (app) {
   });
 
   // Past Transactions
-  app.get("/transactions", function (req, res) {
+  router.get("/transactions", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("transactions", {
         msg: "Welcome!",
@@ -52,7 +54,7 @@ module.exports = function (app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
+  router.get("/example/:id", function (req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
       res.render("example", {
         example: dbExample
@@ -61,7 +63,9 @@ module.exports = function (app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
+  router.get("*", function (req, res) {
     res.render("404");
   });
-};
+
+
+module.exports = router;
