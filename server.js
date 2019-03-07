@@ -40,7 +40,7 @@ app.set("view engine", "handlebars");
 // Routes
 
 app.use("/auth", authRoutes);
-app.use(auth);
+// app.use(auth);
 app.use("/api", apiRoutes);
 app.use(htmlRoutes);
 
