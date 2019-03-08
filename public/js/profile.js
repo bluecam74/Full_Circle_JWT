@@ -160,12 +160,12 @@ function addPlacesToPanel(places){
   placesContainer.appendChild(nodeOL);
 }
 
-// var myid = config.app_id;
-// var secretcode = config.app_code;
+var myid = config.app_id;
+var secretcode = config.app_code;
 // 1. initialize platform
 var platform = new H.service.Platform({
-  app_id: '3n716rcwctobRYYBvpGs',
-  app_code: 'fAE4wQuksVnIz4NJ0l4_5Q',
+  app_id: myid,
+  app_code: secretcode,
   useHTTPS: true,
   useCIT: true
 });
