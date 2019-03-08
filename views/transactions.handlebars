@@ -13,14 +13,24 @@
     <button type="submit" class="btn btn-success" id="sub-req">Submit Request</button>
 </form>
 
-<input type="file" class="filepond" name="filepond" multiple data-max-file-size="3MB" data-max-files="3">
 
 <div class="container reqs">
     <h3>Pending Requests</h3>
-    <div class="pend-trans">No Current Pending Requests</div>
+    <div class="pend-trans">
+        {{#each Pending}}
+        <ul>
+            <li>
+                <p>${{amount}}</p>
+                <p>{{createdAt}}</p>
+            </li>
+        </ul>
+        {{/each}}
+    </div>
 </div>
 
 <div class="container reqs">
     <h3>Approved Requests</h3>
     <div class="pend-trans">No Approved Requests At This Time</div>
 </div>
+
+

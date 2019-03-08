@@ -57,4 +57,24 @@ router.post("/login", function(req, res) {
     })
 })
 
+router.post("/transactions", function(req, res) {
+    console.log(req.body);
+    if(!req.body.userId || !req.body.amount) {
+        return res.status(400).json({msg: new Error("Please put all data on body")});
+    }
+    var pending = {
+        userId: req.body.userId,
+        amount: req.body.amount,
+    };
+
+    models.Pending.create(pending)
+    .then(function(resp) {
+        res.status(201).json({msg: "Pending Request Created"})
+    })
+    .catch(function(err) {
+        res.status(400).json({msg: err.toString()});
+    })
+})
+
+
 module.exports = router;

@@ -1,4 +1,3 @@
-console.log("Logic js is reading");
 $("#login").on("click", function (e) {
     e.preventDefault();
     var email = $("#login-email").val();
@@ -47,6 +46,25 @@ $("#create-submit").on("click", function (e) {
             console.log(resp);
             window.setTimeout(function () {
                 window.location.assign("/profile")
+            }, 2000)
+        })
+        .catch(function (err) {
+            console.error(err);
+        })
+})
+
+$("#sub-req").on("click", function (e) {
+    e.preventDefault();
+    var amount = $("#amountReq").val().trim();
+    console.log(amount);
+    axios.post("/auth/transactions", {
+        userId: "6", 
+        amount: amount
+    })
+        .then(function (resp) {
+            console.log(resp);
+            window.setTimeout(function () {
+                window.location.assign("/transactions")
             }, 2000)
         })
         .catch(function (err) {
